@@ -1,12 +1,15 @@
 /* GLOBAL */
-* {
+html {
+  height: 100%;
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
-
-/* html {
-  scroll-behavior: smooth;
-} */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
@@ -14,11 +17,11 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Rubik", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 28.8px;
   background-color: #fff;
-  color: #4A4B4C;
+  color: #fff;
 }
 
 img {
@@ -27,23 +30,210 @@ img {
 }
 
 
-/* OUTLINE STYLES*/
-*:focus {
-  outline: 2px dashed #7296EC;
-  outline-offset: 3px;
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
+margin-left: auto;
+margin-right: auto;
 }
 
 
-/* BUTTON
-.button {
-  display: inline-block;
-  padding: 13px 20px;
-  border: 0;
-  border-radius: 10px;
-  font-size: 16px;
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* GLOBAL WRAPPER */
+.global-wrapper {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  max-width: 600px;
+  background-image: url(../img/nature.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.hero-content {
+  /* padding-top: 326px; */
+  max-width: 285px;
+}
+
+.hero-heading {
+  font-size: normal;
+  text-transform: uppercase;
+  font-size: 24px;
   line-height: normal;
-  font-weight: 500;
+letter-spacing: 2px;
+color:#fff;
+margin: 0;
+padding: 0;
+margin-bottom: 24px;
+}
+
+
+.hero-link {
   text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-} */
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border: 0;
+  color:#fff;
+  background-color: #1E90FF;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.hero-link-inner::before {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  background-image:url(../img/icon-star.svg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position: center center;
+  content: "";
+}
+
+.hero-link-inner {
+  display: flex;
+  padding: 12px 24px;
+}
+
+
+
+
+.last-videos-section {
+  width: 600px;
+  height: 782px;
+}
+
+
+.last-videos-section-main {
+  padding-top: 54px;
+  padding-left: 54px;
+  color: #222;
+}
+
+
+.last-videos-section-main-text {
+  font-style: normal;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.line-last-videos {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.all-videos {
+  margin-bottom: 23px;
+}
+
+.all-videos-video {
+  display: flex;
+}
+
+.all-videos-video:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.all-videos-photo {
+  border-radius: 4px;
+}
+
+.all-videos-info {
+  margin: 0;
+margin-left: 16px;
+}
+
+.all-videos-info-text {
+  margin: 0;
+  margin-bottom: 4px;
+  font-style: normal;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 2px;
+}
+
+.all-videos-info-stats {
+font-family: "Roboto Condensed", "Arial", sans-serif;
+font-style: normal;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items:center;
+/* justify-content: flex-start; */
+}
+
+.info-when {
+  margin: 0;
+  color: #888 ;
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 16px;
+}
+
+.info-when::before {
+  content: url(../img/clock.png);
+}
+
+.info-how-much {
+  margin: 0;
+  color: #666 ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 16px;
+}
+
+.info-how-much::before {
+  content: url(../img/view.png);
+}
+
+.last-videos-button {
+  display: inline-block;
+  color: #fff ;
+  border: 0;
+  border-radius: 4px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 209px;
+  background-color: #1E90FF;
+}
+
+/* RETINA BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/nature@2x.jpg);
+  }
+}
