@@ -17,16 +17,22 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Bebas Neue", "Arial", sans-serif;
-  font-size: 24px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 28.8px;
-  background-color: #fff;
-  color: #fff;
+  background-color: #222;
+  color: #222;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+*:focus {
+  outline: 2px dashed #1E90FF;
+  outline-offset: 2px;
 }
 
 
@@ -65,6 +71,7 @@ margin-right: auto;
   align-items:center;
   width: 100%;
   max-width: 600px;
+  padding: 24px;
   background-image: url(../img/nature.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,28 +84,37 @@ margin-right: auto;
 }
 
 .hero-heading {
-  font-size: normal;
-  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-size: 24px;
+  font-weight: 400;
   line-height: normal;
-letter-spacing: 2px;
-color:#fff;
-margin: 0;
-padding: 0;
-margin-bottom: 24px;
+  letter-spacing: 2px;
+  color:#fff;
+  text-transform: uppercase;
 }
 
 
 .hero-link {
-  text-decoration: none;
   display: inline-block;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
   border: 0;
   color:#fff;
   background-color: #1E90FF;
+  text-decoration: none;
   /* align-items: center;
   justify-content: center; */
+}
+
+.hero-link:hover {
+  background-color: rgba(30, 144, 255, 0.8);
+}
+
+.hero-link:active {
+  background-color: rgba(30, 144, 255, 0.6);
 }
 
 .hero-link-inner::before {
@@ -118,112 +134,157 @@ margin-bottom: 24px;
 }
 
 
+/* LATEST-VIDEOS */
 
-
-.last-videos-section {
-  width: 600px;
-  height: 782px;
+.latest-videos {
+  width: 100%;
+  max-width: 600px;
+  padding: 54px;
+  background-color: #fff;
 }
 
 
-.last-videos-section-main {
+/* .last-videos-section-main {
   padding-top: 54px;
   padding-left: 54px;
   color: #222;
-}
+} */
 
 
-.last-videos-section-main-text {
-  font-style: normal;
+.latest-videos-heading {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
   letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.latest-videos-divider {
+  height: 1px;
+  border: 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: #999;
+}
+
+.latest-videos-list {
+  padding: 0;
   margin: 0;
   margin-bottom: 24px;
+  list-style: none;
 }
 
-.line-last-videos {
-  margin: 0;
-  margin-bottom: 24px;
-}
-
-.all-videos {
-  margin-bottom: 23px;
-}
-
-.all-videos-video {
-  display: flex;
-}
-
-.all-videos-video:not(:last-child) {
+.latest-videos-item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.all-videos-photo {
+
+/* ITEM-LATEST-VIDEOS */
+.item-latest-videos {
+  display: flex;
+}
+
+.item-latest-videos-img {
+  width: 160px;
+  height: auto;
+  object-fit: cover;
   border-radius: 4px;
 }
 
-.all-videos-info {
-  margin: 0;
-margin-left: 16px;
+.item-latest-videos-info {
+  padding: 16px;
 }
 
-.all-videos-info-text {
-  margin: 0;
-  margin-bottom: 4px;
-  font-style: normal;
+.item-latest-videos-heading {
+margin-top: 0;
+margin-bottom: 4px;
+font-family: "Bebas Neue", "Arial", sans-serif;
+font-weight: 400;
 font-size: 18px;
-line-height: 22px;
+line-height: normal;
 letter-spacing: 2px;
 }
 
-.all-videos-info-stats {
-font-family: "Roboto Condensed", "Arial", sans-serif;
-font-style: normal;
-font-size: 14px;
-line-height: 16px;
+.item-latest-videos-link {
+  display: inline-block;
+  color: #222;
+text-decoration: none;
+}
+
+.item-latest-videos-link:hover {
+color: #1E90FF;
+}
+
+.item-latest-videos-link:active {
+  opacity: 0.6;
+}
+
+.item-latest-videos-meta {
 display: flex;
 align-items:center;
-/* justify-content: flex-start; */
+color: #888;
+font-size: 14px;
+line-height: normal;
 }
 
-.info-when {
-  margin: 0;
-  color: #888 ;
-  margin-right: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 16px;
+.item-latest-videos-published-at {
+margin-right: 24px;
+display: flex;
+align-items: center;
 }
 
-.info-when::before {
-  content: url(../img/clock.png);
+.item-latest-videos-published-at::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url("../img/icon-clock.svg");
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:contain;
+  content: "";
 }
 
-.info-how-much {
-  margin: 0;
-  color: #666 ;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 16px;
+.item-latest-videos-views {
+display: flex;
+align-items: center;
 }
 
-.info-how-much::before {
-  content: url(../img/view.png);
+.item-latest-videos-views::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url("../img/icon-view.svg");
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:contain;
+  content: "";
 }
 
 .last-videos-button {
-  display: inline-block;
-  color: #fff ;
+  display: block;
+  width: 100%;
   border: 0;
   border-radius: 4px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
-  padding: 12px 209px;
+  line-height: normal;
+  padding: 12px;
+  color: #fff ;
   background-color: #1E90FF;
+  cursor: pointer;
 }
+
+.last-videos-button:hover {
+  background-color: rgba(30, 144, 255, 0.8);
+}
+
+.last-videos-button:active {
+  background-color: rgba(30, 144, 255, 0.6);
+}
+
 
 /* RETINA BG */
 @media
